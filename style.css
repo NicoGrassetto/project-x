@@ -1,51 +1,140 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/static/Montserrat-SemiBold.ttf);
+}
 
+@font-face {
+    font-family: MontserratBold;
+    src: url(fonts/static/Montserrat-Bold.ttf);
+}
 
-body{
-    display: grid;
-    grid-template-rows: 10% 1fr;
+body {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(255, 255, 255);
-    row-gap: 10px;
+    font-family: Montserrat;
 }
 
-nav{
-     /* background-color: blue;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* grid-gap: 10px; */
+nav {
+    display: flex;
     color: rgb(36, 36, 36);
-    background-color: aqua;
+    justify-content: space-between;
 }
-nav > .menu{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    background-color: rgb(32, 71, 71);
-    grid-column-end: 5;
-    margin: auto;
-}
-nav > img {
-    width: 5vh;
-    height: 2.5vw;
-    background-color: blue;
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.cards{
-    /*background-color: brown;*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content:left;
+    gap: 20px;
 }
 
-.card > img{
+.card > img {
     border-radius: 10px 10px 0px 0px;
+    width: 300px;
+    height: 300px;
 }
 
-.card{
-    /* background-color: violet; */
+.card {
     display: grid;
-    grid-template-rows: 1fr 100px
+    grid-template-rows: 1fr 100px;
 }
 
-.content{
-    background-color: rgb(230, 230, 230);
+.content {
+    background-color: rgb(241, 241, 241);
+    border-radius: 0px 0px 10px 10px;
+    border-color: black;
+}
+
+.created-by {
+    color: rgb(39,39,39)
+}
+
+.tag-name {
+    color: rgb(73,73,73);
+}
+
+.user-info {
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    font-family: MontserratBold;
+    height: 50px;
+    gap:10px;
+}
+
+.user-pp {
+    background-image: url(images/pp-1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height:30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px
+}
+.nav-search-bar {
+    border-radius: 40px 40px 40px 40px;
+    background-color: rgb(242, 242, 242);
+    height: 35px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-search-bar > input {
+    border: none;
+    border-radius: 40px 0px 0px 40px;
+    background-color: rgb(242, 242, 242);
+    width: 90%;
+    font-family: Montserrat;
+    font-size: 12px;
+}
+.nav-search-bar > input:focus {
+    outline: none;
+}
+
+.nav-search-bar > img {
+    background-color: rgb(242, 242, 242);
+    width: 20px;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.nav-connect-wallet-button {
+    background-color: black;
+    border-style: none;
+    border-radius: 40px 40px 40px 40px;
+    color: white;
+    font-family: Montserrat;
+}
+
+.nav-connect-wallet-button > span{
+    margin: 10px 10px 10px 10px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(76, 76, 76);
+}
+
+.nav-menu > div {
+    width: 90px;
+    font-size: 12px;
+}
+
+.prompt {
+    background-color: blueviolet;
+    margin-top: 10px;
 }
